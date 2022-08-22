@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kavoon&display=swap');
+
+
+:root{
+	scroll-behavior: smooth;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', sans-serif;
+	background-color: #eee;
+	color: #222;
+}
+
+header{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: rgba(238, 238, 230, 1);
+	flex-wrap: wrap;
+	padding: 0;
+}
+
+.logo{
+	width: 280px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo h2 a{
+	font-family: 'Abril Fatface', cursive;
+	text-decoration: none;
+	color: black;
+}
+
+.logo img{
+	margin-right: 10px;
+}
+
+nav{
+	width: 50%;
+}
+
+nav ul{
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+nav ul li{
+	list-style: none;
+}
+
+nav ul li a{
+	font-size: 18px;
+	color: black;
+	text-decoration: none;
+}
+
+nav ul li a:hover{
+	color: #f1c40f;
+}
+
+section{
+	box-sizing: border-box;
+	min-height: 100vh;
+	min-width: 100wh;
+}
+
+#login{
+	width: 100wh;
+	height: 100vh;
+	z-index: -1;
+	background-image: linear-gradient(344deg, rgba(0,15,36,0.4) 0%, rgba(3,226,244,0.4) 64%, rgba(0,189,255,0.4) 100%), url('https://i.pinimg.com/originals/d5/ea/f7/d5eaf7ab3a8020fa44c72e7a12048090.jpg');
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#login h1{
+	font-family: 'Kavoon', cursive;
+	color: #ddd;
+	text-shadow: 1px 1px 1px black;
+	font-size: 35px;
+	text-align: center;
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+}
+
+input[type='email']{
+	min-width: 275px;
+	width: 100%;
+	padding: 5px;
+	margin: 15px 0;
+}
+
+#form input[type='submit']{
+	max-width: 150px;
+	width: 100%;
+	margin: auto;
+	height: 30px;
+	border: 0;
+    background-color: #f1c40f;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+#form input[type='submit']:hover{
+	background-color: orange;
+  	transition: background-color .8s;
+}
+
+#features{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.text-features{
+	width: 60%;
+}
+
+.text-features div{
+	margin-bottom: 20px;
+	line-height: 20px;
+}
+
+#features h1{
+	text-align: center;
+	font-size: 26px;
+	font-weight: bolder;
+}
+
+#videos{
+	padding-top: 100px;
+	
+}
+
+#videos h1{
+	text-align: center;
+	font-size: 	26px;
+}
+
+.video-page{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.video-page iframe{
+	padding: 10px;
+}
+
+#footer{
+	padding-top: 100px;
+}
+
+#footer h1{
+	text-align: center;
+}
+
+.pricing{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	margin: 0 100px 0 100px;
+}
+
+.card{
+	width: calc(100% / 3);
+	background-color: #eee;
+	margin: 10px;
+	border: 1px solid black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-bottom: 20px;
+}
+
+.header-card{
+	width: 100%;
+	height: 50px;
+	background-color: #ccc;
+	line-height: 50px;
+	text-align: center;
+	font-weight: bolder;
+}
+
+.card ol li{
+	list-style: none;
+	text-align: center;
+}
+
+.btn{
+	padding: 12px 15px 12px 15px;
+	background-color: #f1c40f;
+	border: 0;
+	font-weight: bolder;
+	cursor: pointer;
+	transition: 1s;
+}
+
+.btn:hover{
+	background-color: orange;
+}
+
+footer {
+  margin-top: 30px;
+  background-color: #ddd;
+  padding: 20px;
+}
+
+footer > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer > ul > li {
+  padding: 0 10px;
+  list-style: none;
+}
+
+footer > ul > li > a{
+	text-decoration: none;
+}
+
+footer > span {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9em;
+  color: #444;
+}
+
+/*Media Query*/
+
+@media (max-width:  800px){
+	#videos{
+		margin-bottom: 250px;
+	}
+	.pricing{
+		flex-direction: column;
+	}
+	.card{
+		width: 70%;
+	}
+}
+
+@media (max-width: 650px){
+	nav ul{
+		flex-direction: column;
+	}
+
+	.text-features{
+		width: 400px;
+	}
+}
+
+@media (max-width: 576px){
+	nav ul{
+		flex-direction: column;
+		margin-top: -15px;
+	}
+
+	.logo{
+		margin-top: -13px;
+	}
+	.card{
+		width: 100%;
+	}
+}
+
+
+
